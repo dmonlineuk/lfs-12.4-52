@@ -3,4 +3,5 @@ sudo parted /dev/sda --script \
     mkpart biosboot 1MiB 2MiB \
     set 1 bios_grub on \
     mkpart boot ext4 2MiB 202MiB \
-    mkpart root ext4 202MiB 100% 
+    mkpart swap linux-swap 202MiB 16586MiB \
+    mkpart root ext4 16586MiB 100% 
