@@ -1,7 +1,7 @@
 #! /bin/bash
 here=`pwd`
 cd $LFS/sources
-tar xf ncurses-6.5-20250809.tar.xz
+tar xf ncurses-6.5-20250809.tgz
 cd ncurses-6.5-20250809
 
 mkdir build
@@ -11,8 +11,6 @@ pushd build
   make -C progs tic
   install progs/tic $LFS/tools/bin
 popd
-
-
 
 time {
     ./configure --prefix=/usr                \
@@ -29,7 +27,7 @@ time {
                 AWK=gawk
 
     make && make DESTDIR=$LFS install
-    
+
     ln -sv libncursesw.so $LFS/usr/lib/libncurses.so
     sed -e 's/^#if.*XOPEN.*$/#if 1/' \
         -i $LFS/usr/include/curses.h
