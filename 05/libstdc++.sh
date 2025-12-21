@@ -1,0 +1,26 @@
+#! /bin/bash
+here=`pwd`
+cd $LFS/sources
+tar xf gcc-15.2.0.tar.xz
+cd gcc-15.2.0
+
+mkdir -v build && cd build
+
+time {
+    ../libstdc++-v3/configure      \
+        --host=$LFS_TGT            \
+        --build=$(../config.guess) \
+        --prefix=/usr              \
+        --disable-multilib         \
+        --disable-nls              \
+        --disable-libstdcxx-pch    \
+        --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/15.2.0
+
+    make && make DESTDIR=$LFS install
+}
+
+rm -v $LFS/usr/lib/lib{stdc++{,exp,fs},supc++}.la
+
+cd $here
+
+echo "If complete, delete 'rm -rf $LFS/sources/gcc-15.2.0'"
