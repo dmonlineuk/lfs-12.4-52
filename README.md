@@ -96,6 +96,27 @@ We start in the local copy of this github repo:
   06-06.sh:
     Build diffutils
   06-07.sh:
-    Build findutils
+    Build file
   06-08.sh:
-    
+    Build findutils
+  06-09.sh:
+    Build gawk
+  06-10.sh:
+    Build grep
+  06-11.sh:
+    Build gzip
+  06-12.sh:
+    Build make
+  06-13.sh:
+    Build patch
+  06-14.sh:
+    Build sed
+  06-15.sh:
+    Build tar
+  06-16.sh:
+    Build xz
+  06-17.sh:
+    Build binutils - Pass 2
+  06-18.sh:
+    Build gcc - Pass 2
+07
