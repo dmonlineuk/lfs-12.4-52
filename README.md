@@ -12,8 +12,8 @@ In a terminal:
 # We may also want SSH for remote access to our VM
 sudo apt install git gdown openssh-server
 
-mkdir -v /lfs-project/
-chmod 0777 /lfs-project/
+sudo mkdir -v /lfs-project/
+sudo chmod 0777 /lfs-project/
 cd /lfs-project/
 
 # Scripts fro github. This includes scripts to download source, from er... source :-)
