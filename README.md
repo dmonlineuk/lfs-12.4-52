@@ -1,12 +1,101 @@
 # LFS 12.4-52 (17th December 2025)
 
-IMPORTANT - do NOT run anything from this repo unless you are also reading along with the LFS book. I make no claims as to the effectiveness or usefulness of my own scripts, which are written for my own use. I assume no responsibility for any damage caused by running these, this will entirely be at your own risk.
+Link: https://www.linuxfromscratch.org/lfs/view/development/index.html
 
-## Why is this here?
+## Starting Point
 
-After a couple of false starts, I determined the best way to approach this project is to have the commands I intend to rn scripted out, organised by chapter and page-subject. I can then work systematically and make debugging easier. 
+A machine with a single drive attached. Ubuntu live CD booted and installer canceled.
+
+In a terminal:
+```bash
+# We need git to pull this repo, and optionally gdown for my sources repo in Google Drive (public link provided)
+# We may also want SSH for remote access to our VM
+sudo apt install git gdown openssh-server
+
+mkdir -v /lfs-project/
+chmod 0777 /lfs-project/
+cd /lfs-project/
+
+# Scripts fro github. This includes scripts to download source, from er... source :-)
+git clone https://github.com/dmonlineuk/lfs-12.4-52.git
+
+# If the source links are broken or timing out, here's a copy of the sources to untar as you see fit:
+gdown https://drive.google.com/uc?id=1Qt6RYvtybG2zpCb1sQFMVAvAluECKyZs
+tar xf lfs-12.4-52-sources.tar
+
+# For SSH to work, password needs to be set for the ubuntu user
+passwd
+```
 
 ## Structure
 
-I may post an update here that shows the relationship between chapters and pages, and the folders inside the repo. Then again, I may not.
+We start in the local copy of this github repo:
+`cd \lfs-project\lfs-12.4-52\`
 
+```text
+02
+  02-02.sh:
+    Check the host for all pre-requisites. Install missing ones
+  02-02-fix.sh:
+    Installs the missing pckages. Rerun '02-02.sh' to verify
+  02-04.sh:
+    Create partitions
+  02-05.sh:
+    Make filesystems and swap
+  02-06.sh:
+    Setting the root user, umask and LFS variable
+  02-07.sh:
+    Mount partitions and swap
+03
+  03-01-prep.sh:
+    Create sources folder
+  03-01-fetch-src.sh:
+    Download source files. Alternatively, copy from '/lfs-project/lfs-12.4-52/'
+  03-01-verify-src.sh:
+    Check the md5sums for the source files
+  03-01-fetch-patch.sh:
+    Download patches. Alternatively, copy from '/lfs-project/lfs-12.4-52/'
+  03-01-verify-patch.sh:
+    Check the md5sums for the patch files
+  03-01-post.sh
+    Set the owner for the source files
+  md5sums.txt
+  md5sums-patch.txt
+  wget-list.txt
+  wget-list-patch.txt
+    Text files used by the scripts above
+04
+  04-02.sh:
+    Set up required folder structure
+  04-03.sh:
+    Create an 'lfs' user
+  04-04.sh:
+    Set up the 'lfs' environment profile etc
+05
+  05-02.sh:
+    Build binutils - Pass 1
+  05-03.sh:
+    Build gcc - Pass 1
+  05-04.sh:
+    Build linux API headers
+  05-05.sh:
+    Build glibc
+  05-05-verify.sh:
+    Verify the glibc build
+  05-06.sh:
+    Build Libstdc++ from gcc
+06
+  06-02.sh:
+    Build m4
+  06-03.sh:
+    Build ncurses
+  06-04.sh:
+    Build bash
+  06-05.sh:
+    Build coreutils
+  06-06.sh:
+    Build diffutils
+  06-07.sh:
+    Build findutils
+  06-08.sh:
+    
