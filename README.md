@@ -64,6 +64,8 @@ We start in the local copy of this github repo:
   wget-list.txt
   wget-list-patch.txt
     Text files used by the scripts above
+  run-me-last.sh
+    This should be run to make this repo available inside the chroot later
 04
   04-02.sh:
     Set up required folder structure
@@ -120,3 +122,35 @@ We start in the local copy of this github repo:
   06-18.sh:
     Build gcc - Pass 2
 07
+  07-01.sh:
+    Logs in as root
+  07-02.sh:
+    Claim ownership so file ownership isn't orphaned
+  07-03.sh:
+    Prep virtual kernel fs
+  07-04.sh:
+    Enter chroot
+  07-05.sh:
+    Create folders (Linux FHS)
+  07-06.sh:
+    More essential files and symlinks
+  07-07.sh:
+    Build gettext
+  07-08.sh:
+    Build bison
+  07-09.sh:
+    Build perl
+  07-10.sh:
+    Build python
+  07-11.sh:
+    Build texinfo
+  07-12.sh:
+    Build util-linux
+  07-13-01.sh:
+    Cleanup system
+  07-13-02-exit.sh:
+    Leave chroot, but ONLY if we need to backup/restore
+  07-13-02-backup.sh:
+    Backup the environment
+  07-13-02-restore.sh:
+08

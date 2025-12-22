@@ -4,4 +4,4 @@ umask 022
 
 echo "If you are not root, be root and rerun this"
 echo "'sudo su -'"
-echo "'bash start-su.sh'"
+echo "'source 07-01.sh'"
