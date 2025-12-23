@@ -23,6 +23,10 @@ git clone https://github.com/dmonlineuk/lfs-12.4-52.git
 gdown https://drive.google.com/uc?id=1Qt6RYvtybG2zpCb1sQFMVAvAluECKyZs
 tar xf lfs-12.4-52-sources.tar
 
+# If recovering from backup, here's a copy of the backup to pull down:
+gdown https://drive.google.com/uc?id=1qzWZcwg_W_uBFsDdoVCNYYU0qQP7GSfe
+tar xf 
+
 # For SSH to work, password needs to be set for the ubuntu user
 passwd
 ```
