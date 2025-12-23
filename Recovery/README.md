@@ -11,11 +11,12 @@ We start with chapter 03, since it's probably worth starting from scratch if you
 3. Be root and run 02-06.sh
     - check $LFS and umask!!!
 4. Run 02-07.sh to mount all partitions and swap
-5. Continue with getting sources from where you left off
+5. If you need to refresh anything from /lfs/project to /mnt/lfs/lfs-project, you should do so here
+6. Continue with getting sources from where you left off
 
 # Chapter 04
 
-1. Steps 1-4 above
+1. Steps 1-5 above
 2. Scripts 04-03.sh and 04-04.sh are required to recreate lfs user, group and environment
 
 # Chapter 05
