@@ -8,7 +8,7 @@ We start with chapter 03, since it's probably worth starting from scratch if you
 
 1. Follow the README.md preliniaries to get git, gdown, and ssh running
 2. Run 02-02-fix.sh and 02-02.sh to verify
-3. Be root and run 02-06.sh
+3. Be root and 'source' 02-06.sh
     - check $LFS and umask!!!
 4. Run 02-07.sh to mount all partitions and swap
 5. If you need to refresh anything from /lfs/project to /mnt/lfs/lfs-project, you should do so here
@@ -33,7 +33,7 @@ We start with chapter 03, since it's probably worth starting from scratch if you
 # Chapter 07
 
 1. Step 1 above
-2. Be root and run 07-01.sh
+2. Be root and 'source' 07-01.sh
     - check $LFS and umask!!!
 3. Run 07-03.sh to ensure the virtual kernel file system is in place
 4. Run 07-04.sh to enter 'chroot'
