@@ -1,4 +1,7 @@
 #! /bin/bash
+here=`pwd`
+cd $LFS/sources/glibc-2.42/build
+
 echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &> dummy.log
 readelf -l a.out | grep ': /lib'
 
@@ -38,6 +41,8 @@ echo "Expected: attempt to open /mnt/lfs/usr/lib/libc.so.6 succeeded"
 grep found dummy.log
 
 echo "Expected: found ld-linux-x86-64.so.2 at /mnt/lfs/usr/lib/ld-linux-x86-64.so.2"
+
+cd $here
 
 echo "Delete when ready: 'rm -v a.out dummy.log'"
 echo "If complete, delete 'rm -rf $LFS/sources/glibc-2.42'"
