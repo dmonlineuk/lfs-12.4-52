@@ -41,11 +41,11 @@ ver_kernel()
 }
 
 # Coreutils first because --version-sort needs Coreutils >= 7.0
-# ver_check Coreutils      sort     8.1 || bail "Coreutils too old, stop"
+ver_check Coreutils      sort     8.1 || bail "Coreutils too old, stop"
 # Altered for ubuntu 24.10 since it thinks Coreutils v9.5 is actually 0.2.2
 # - v 25.10 switched to rust-coreutils, and version numbering is different now.
 # Maybe this leads to bugs later? Will try another distro if this is the case.
-ver_check Coreutils      sort     0.2.2 || bail "Coreutils too old, stop"
+# ver_check Coreutils      sort     0.2.2 || bail "Coreutils too old, stop"
 ver_check Bash           bash     3.2
 ver_check Binutils       ld       2.13.1
 ver_check Bison          bison    2.7
