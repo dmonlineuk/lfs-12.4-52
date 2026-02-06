@@ -1,8 +1,8 @@
 #! /bin/bash
 here=`pwd`
 cd $LFS/sources
-tar xf linux-6.18.1.tar.xz
-cd linux-6.18.1
+tar xf linux-6.16.1.tar.xz
+cd linux-6.16.1
 
 make mrproper
 
@@ -12,4 +12,4 @@ cp -rv usr/include $LFS/usr
 
 cd $here
 
-echo "If complete, delete 'rm -rf $LFS/sources/linux-6.18.1'"
+echo "If complete, delete 'rm -rf $LFS/sources/linux-6.16.1'"
