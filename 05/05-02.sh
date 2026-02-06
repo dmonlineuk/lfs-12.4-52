@@ -1,8 +1,8 @@
 #! /bin/bash
 here=`pwd`
 cd $LFS/sources
-tar xf binutils-2.45.1.tar.xz
-cd binutils-2.45.1
+tar xf binutils-2.45.tar.xz
+cd binutils-2.45
 
 mkdir -v build && cd build
 
@@ -21,4 +21,4 @@ time {
 
 cd $here
 
-echo "If complete, delete 'rm -rf $LFS/sources/binutils-2.45.1'"
+echo "If complete, delete 'rm -rf $LFS/sources/binutils-2.45'"
