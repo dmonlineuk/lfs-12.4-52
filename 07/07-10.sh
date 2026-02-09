@@ -1,8 +1,8 @@
 #! /bin/bash
 here=`pwd`
 cd /sources
-tar xf Python-3.14.2.tar.xz
-cd Python-3.14.2
+tar xf Python-3.13.7.tar.xz
+cd Python-3.13.7
 
 time {
     ./configure --prefix=/usr       \
@@ -15,4 +15,4 @@ time {
 
 cd $here
 
-echo "If complete, delete 'rm -rf $LFS/sources/Python-3.14.2'"
+echo "If complete, delete 'rm -rf $LFS/sources/Python-3.13.7'"
