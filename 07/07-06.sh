@@ -49,7 +49,7 @@ install -o tester -d /home/tester
 
 exec /usr/bin/bash --login
 
-echo "Still runnung..."
+echo "Still running..."
 
 touch /var/log/{btmp,lastlog,faillog,wtmp}
 chgrp -v utmp /var/log/lastlog
