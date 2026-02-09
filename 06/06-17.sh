@@ -1,8 +1,8 @@
 #! /bin/bash
 here=`pwd`
 cd $LFS/sources
-tar xf binutils-2.45.1.tar.xz
-cd binutils-2.45.1
+tar xf binutils-2.45.tar.xz
+cd binutils-2.45
 
 sed '6031s/$add_dir//' -i ltmain.sh
 
@@ -28,4 +28,4 @@ rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes,sframe}.{a,la}
 
 cd $here
 
-echo "If complete, delete 'rm -rf $LFS/sources/binutils-2.45.1'"
+echo "If complete, delete 'rm -rf $LFS/sources/binutils-2.45'"
