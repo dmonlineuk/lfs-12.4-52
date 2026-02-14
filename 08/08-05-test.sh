@@ -1,6 +1,6 @@
 #! /bin/bash
 here=`pwd`
-cd /sources/glibc-2.42
+cd /sources/glibc-2.42/build/
 
 make check
 
