@@ -164,4 +164,5 @@ We start in the local copy of this github repo:
     Configure and install components from Glibc
   08-06.sh:
     Build Zlib
-
+  08-07.sh:
+    Build Bzip2
