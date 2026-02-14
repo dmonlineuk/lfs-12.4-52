@@ -184,4 +184,8 @@ We start in the local copy of this github repo:
     Install File
   08-12.sh:
     Build & install Readline
+  08-13-build.sh:
+    Build & test M4
+  08-13-install.sh:
+    Install M4
 
