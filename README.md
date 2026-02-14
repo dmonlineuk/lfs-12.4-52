@@ -162,4 +162,6 @@ We start in the local copy of this github repo:
     Test build of Glibc
   08-05-install.sh:
     Configure and install components from Glibc
+  08-06.sh:
+    Build Zlib
 
