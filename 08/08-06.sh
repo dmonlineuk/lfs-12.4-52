@@ -1,7 +1,7 @@
 #! /bin/bash
 here=`pwd`
 cd /sources
-tar xf zlib-1.3.1.tar.xz
+tar xf zlib-1.3.1.tar.gz
 cd zlib-1.3.1
 
 time {
