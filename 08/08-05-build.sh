@@ -4,8 +4,6 @@ cd /sources
 tar xf glibc-2.42.tar.xz
 cd glibc-2.42
 
-patch -Np1 -i ../glibc-2.42-upstream_fixes-1.patch
-
 patch -Np1 -i ../glibc-2.42-fhs-1.patch
 
 sed -e '/unistd.h/i #include <string.h>' \
