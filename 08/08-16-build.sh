@@ -2,7 +2,7 @@
 here=`pwd`
 cd /sources
 tar xf tcl8.6.16-src.tar.gz
-cd tcl8.6.16-src
+cd tcl8.6.16
 
 time {
     SRCDIR=$(pwd)

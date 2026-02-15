@@ -1,6 +1,6 @@
 #! /bin/bash
 here=`pwd`
-cd /sources/tcl8.6.16-src
+cd /sources/tcl8.6.16
 
 time {
     make install
@@ -18,4 +18,4 @@ cp -v -r  ./html/* /usr/share/doc/tcl-8.6.16
 
 cd $here
 
-echo "If complete, delete 'rm -rf /sources/flex-2.6.4'"
+echo "If complete, delete 'rm -rf /sources/tcl8.6.16'"
