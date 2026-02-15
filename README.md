@@ -196,4 +196,8 @@ We start in the local copy of this github repo:
     Build & test Flex
   08-15-install.sh:
     Install Flex
+  08-16-build.sh:
+    Build & test Tcl
+  08-16-install.sh:
+    Install Tcl
 
